@@ -27,4 +27,4 @@ After cloning:
     SDL2_ttf.lib
     SDL2_mixer.lib
     
-Note that different versions of SDL may cause some problems. For example, \_SDL_TTF_H was renamed to SDL_TTF_H
+Note that different versions of SDL may cause some problems. For example, \_SDL_TTF_H was renamed to SDL_TTF_H_ in SDL_ttf.h
