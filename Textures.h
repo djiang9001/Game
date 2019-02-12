@@ -7,6 +7,7 @@
 #include <SDL_ttf.h>
 #include <stdio.h>
 
+
 //the renderer
 extern SDL_Renderer *gRenderer;
 
@@ -25,7 +26,7 @@ public:
 	//Loads image at specified path
 	bool loadFromFile(std::string path);
 
-#ifdef _SDL_TTF_H
+#ifdef SDL_TTF_H_
 	//Creates image from font string
 	bool loadFromRenderedText(std::string textureText, SDL_Color textColor);
 #endif
