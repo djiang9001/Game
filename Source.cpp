@@ -29,6 +29,7 @@ void close();
 SDL_Window* gWindow = NULL;
 
 LTexture gFPSTextTexture;
+LTexture gStartTexture;
 
 //Scene textures
 LTexture gPlayerTexture;
@@ -94,7 +95,7 @@ bool loadMedia()
 	{
 		//Render text
 		SDL_Color textColor = { 0, 0, 0 };
-		if (!gFPSTextTexture.loadFromRenderedText("FPS:", textColor))
+		if (!gStartTexture.loadFromRenderedText("PRESS ENTER TO START", textColor))
 		{
 			printf("Failed to render text texture!\n");
 			success = false;
@@ -327,6 +328,10 @@ int main(int argc, char* args[])
 
 				//while application is running but not playing
 				while (!play && !quit) {
+					SDL_RenderClear(gRenderer);
+					SDL_SetRenderDrawColor(gRenderer, 0xFF, 0xFF, 0xFF, 0xFF);
+					gStartTexture.render((SCREEN_WIDTH - gStartTexture.getWidth()) / 2, SCREEN_HEIGHT / 2);
+					SDL_RenderPresent(gRenderer);
 					while (SDL_PollEvent(&e) != 0)
 					{
 						//User requests quit
@@ -393,6 +398,7 @@ int main(int argc, char* args[])
 						player.handleEvent(e);
 					}
 					//hold the game paused while it is paused
+					//Still needs: to keep track of how long game has been paused so things like speeding up the game and fps timers don't get messed up from pausing
 					
 					while (paused) {
 
