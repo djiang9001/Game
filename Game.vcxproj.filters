@@ -41,9 +41,6 @@
     <ClInclude Include="Enemy.h">
       <Filter>Source Files</Filter>
     </ClInclude>
-    <ClInclude Include="Font.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
     <ClInclude Include="Timer.h">
       <Filter>Source Files</Filter>
     </ClInclude>

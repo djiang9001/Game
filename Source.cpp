@@ -13,7 +13,6 @@
 //My header files
 #include "Player.h"
 #include "Enemy.h"
-#include "Font.h"
 #include "Timer.h"
 #include "Textures.h"
 
@@ -254,6 +253,8 @@ int main(int argc, char* args[])
 		{
 			//Main loop flag
 			bool quit = false;
+
+			//Scene control flags
 			bool play = false;
 			bool paused = false;
 

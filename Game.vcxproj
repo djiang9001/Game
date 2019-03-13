@@ -133,7 +133,6 @@
   <ItemGroup>
     <ClInclude Include="Constants.h" />
     <ClInclude Include="Enemy.h" />
-    <ClInclude Include="Font.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="Textures.h" />
     <ClInclude Include="Timer.h" />
